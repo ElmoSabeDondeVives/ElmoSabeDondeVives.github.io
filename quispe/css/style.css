@@ -346,7 +346,7 @@ textarea.input {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: var(--celeste);
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -652,6 +652,7 @@ textarea.input {
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
   color: var(--rojo);
   background-color: transparent;
+  font-weight: 700;
 }
 
 .main-nav>li>a:after {
