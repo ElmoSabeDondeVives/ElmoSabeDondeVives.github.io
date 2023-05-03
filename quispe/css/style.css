@@ -104,7 +104,7 @@ ul, ol {
 .primary-btn {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #D10024;
+  background-color: var(--verde);
   border: none;
   border-radius: 40px;
   color: #FFF;
@@ -738,7 +738,7 @@ textarea.input {
   bottom: 0;
   left: 0px;
   width: 60%;
-  background: #D10024;
+  background: var(--amarillo);
   opacity: 0.9;
   -webkit-transform: skewX(-45deg);
   -ms-transform: skewX(-45deg);
@@ -752,7 +752,7 @@ textarea.input {
   bottom: 0;
   left: 1px;
   width: 100%;
-  background: #D10024;
+  background: var(--amarillo);
   opacity: 0.9;
   -webkit-transform: skewX(-45deg) translateX(-100%);
   -ms-transform: skewX(-45deg) translateX(-100%);
@@ -820,7 +820,7 @@ textarea.input {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: #D10024e6;
+  background: var(--verde);
   text-align: center;
   border-radius: 50%;
   margin: 0px 5px;
@@ -901,13 +901,13 @@ textarea.input {
 
 .product .product-img .product-label>span.sale {
   background-color: #FFF;
-  border-color: #D10024;
-  color: #D10024;
+  border-color: var(--verde);;
+  color: var(--verde);;
 }
 
 .product .product-img .product-label>span.new {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: var(--verde);
+  border-color: var(--verde);
   color: #FFF;
 }
 
@@ -939,14 +939,14 @@ textarea.input {
 }
 
 .product .product-body .product-price {
-  color: #D10024;
+  color: var(--celeste);
   font-size: 18px;
 }
 
 .product .product-body .product-price .product-old-price {
   font-size: 70%;
   font-weight: 400;
-  color: #8D99AE;
+  color: var(--rojo);
 }
 
 .product .product-body .product-rating {
@@ -965,7 +965,7 @@ textarea.input {
 }
 
 .product .product-body .product-rating>i.fa-star {
-  color: #ef233c;
+  color: var(--amarillo);
 }
 
 .product .product-body .product-rating:after {
@@ -1136,13 +1136,13 @@ textarea.input {
 
 .product-widget .product-body .product-price {
   font-size: 14px;
-  color: #D10024;
+  color: var(--celeste);
 }
 
 .product-widget .product-body .product-price .product-old-price {
   font-size: 70%;
   font-weight: 400;
-  color: #8D99AE;
+  color: var(--rojo);
 }
 
 .product-widget .product-body .product-price .qty {
@@ -1973,7 +1973,7 @@ textarea.input {
   width: 160px;
   height: 40px;
   font-weight: 700;
-  background: #D10024;
+  background: var(--rojo);
   color: #FFF;
   border: none;
   border-radius: 0px 40px 40px 0px;
