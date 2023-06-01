@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./img/favicon.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./plugins/nice-select2/nice-select2.css" />
+		<link rel="stylesheet" href="https://unpkg.com/metismenujs/dist/metismenujs.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Colombo - Error 404</title>
+	</head>
+	<body class="font-cairo text-txt bg-gray-50 overflow-hidden flex flex-col min-h-screen">
+		<header class="bg-secondary-color">
+			<div class="flex flex-col gap-5 container mx-auto py-5 px-5">
+				<div class="flex justify-between items-center text-sm">
+					<div class="hidden sm:flex gap-5">
+						<div class="relative flex items-center gap-2 after-line-r">
+							<i class="bi bi-envelope flex text-xl text-primary-color"></i>
+							<a href="#">colombo@example.com</a>
+						</div>
+						<div class="flex items-center gap-2">
+							<i class="bi bi-truck flex text-xl text-primary-color"></i>
+							<span>Free shipping for all order of $100</span>
+						</div>
+					</div>
+					<div class="flex gap-5 ml-auto">
+						<div class="relative flex items-center gap-2 after:hidden lg:after:flex after-line-r">
+							<a class="flex text-zinc-500 hover:text-zinc-400 transition-all duration-300" href="#">
+								<i class="bi bi-facebook flex text-base"></i>
+							</a>
+							<a class="flex text-zinc-500 hover:text-zinc-400 transition-all duration-300" href="#">
+								<i class="bi bi-twitter flex text-base"></i>
+							</a>
+							<a class="flex text-zinc-500 hover:text-zinc-400 transition-all duration-300" href="#">
+								<i class="bi bi-instagram flex text-base"></i>
+							</a>
+						</div>
+						<div class="hidden lg:flex relative">
+							<a class="btn-open-modal flex items-center gap-1" href="javascript:void(0)" data-target=".login-modal">
+								<i class="bi bi-person flex text-xl text-primary-color text-stroke-thin pointer-events-none"></i>
+								<span class="pointer-events-none">Log In</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="flex justify-between items-center gap-5">
+					<a class="max-h-[50px]" href="index.html">
+						<img class="h-full object-cover" src="./img/logo.png" alt="logo" />
+					</a>
+					<nav class="hidden lg:block">
+						<ul class="flex flex-wrap justify-center items-center gap-y-2 gap-x-5 text-[15px] font-bold uppercase tracking-wider">
+							<li>
+								<a class="font-extrabold flex transition-all duration-300 hover:text-primary-color" href="index.html">
+									<span>Home</span>
+								</a>
+							</li>
+							<li class="group relative">
+								<div class="group-hover:text-primary-color transition-all duration-300 hover:text-primary-color cursor-pointer">
+									<div class="font-extrabold flex items-center gap-1">
+										<span>Shop</span>
+										<i class="bi bi-chevron-down flex text-primary-color text-stroke-thick text-xs"></i>
+									</div>
+								</div>
+								<ul class="text-sm opacity-0 invisible translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:block overflow-hidden absolute w-[200px] bg-white border-t-4 border-primary-color z-[10] shadow">
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="shop-grid.html">
+											<span>Shop Grid</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="shop-listed.html">
+											<span>Shop Listed</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="shop-mixed.html">
+											<span>Shop Mixed</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="group relative">
+								<div class="group-hover:text-primary-color transition-all duration-300 hover:text-primary-color cursor-pointer">
+									<div class="font-extrabold flex items-center gap-1">
+										<span>Pages</span>
+										<i class="bi bi-chevron-down flex text-primary-color text-stroke-thick text-xs"></i>
+									</div>
+								</div>
+								<ul class="text-sm opacity-0 invisible translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:block overflow-hidden absolute w-[200px] bg-white border-t-4 border-primary-color z-[10] shadow">
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="product-details.html">
+											<span>Product Details</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="wishlist.html">
+											<span>Wishlist</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="shopping-cart.html">
+											<span>Shopping Cart</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="checkout.html">
+											<span>Checkout</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="purchase-completed.html">
+											<span>Purchase Completed</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="purchase-failed.html">
+											<span>Purchase Failed</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="error404.html">
+											<span>Error 404</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="my-account.html">
+											<span>My Account</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="login.html">
+											<span>Login</span>
+										</a>
+									</li>
+									<li>
+										<a class="flex transition-all duration-300 hover:text-primary-color p-2" href="sign-up.html">
+											<span>Sign Up</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="font-extrabold transition-all duration-300 hover:text-primary-color" href="contact-us.html">
+									<span>Contact Us</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="lg:hidden">
+						<button class="btn-open-modal transition-all duration-300" data-target=".menu-mob">
+							<i class="bi bi-list flex text-3xl text-primary-color text-stroke-medium pointer-events-none"></i>
+						</button>
+					</div>
+					<div class="items-center gap-5 hidden lg:flex">
+						<div class="relative group">
+							<a class="group-hover:text-primary-color transition-all duration-300" href="wishlist.html">
+								<i class="bi bi-heart text-[35px] transform translate-y-1 text-stroke-thin flex pointer-events-none"></i>
+							</a>
+							<span class="group-hover:bg-white group-hover:text-primary-color group-hover:shadow badge absolute top-0 right-[-6px] h-[15px] min-w-[15px] px-[2px] transition-all duration-300">0</span>
+						</div>
+						<div class="flex gap-1">
+							<div class="relative group">
+								<a class="group-hover:text-primary-color transition-all duration-300" href="shopping-cart.html">
+									<i class="bi bi-cart3 text-[35px] flex pointer-events-none"></i>
+								</a>
+								<span class="group-hover:bg-white group-hover:text-primary-color group-hover:shadow badge absolute top-0 right-[-6px] h-[15px] min-w-[15px] px-[2px] transition-all duration-300">0</span>
+							</div>
+							<span class="font-bold place-self-end leading-none">$0.00</span>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap-reverse lg:flex-nowrap justify-between items-center gap-5">
+					<div class="order-1 relative w-full sm:w-[200px] sm:min-w-[200px]">
+						<ul class="metismenu when-active">
+							<li class="bg-primary-color hover:bg-primary-hover rounded transition-all duration-300">
+								<div class="metismenu-btn flex justify-center items-center gap-2 text-white p-3 cursor-pointer select-none" aria-expanded="false" role="menu">
+									<i class="bi bi-list text-stroke-thick text-xs"></i>
+									<span class="text-center uppercase tracking-wider font-bold">Categories</span>
+									<i class="bi bi-chevron-down text-stroke-thick text-xs"></i>
+								</div>
+								<div class="metismenu-content bg-white w-full shadow z-[5]" style="position: absolute">
+									<ul>
+										<li class="border-b">
+											<div class="metismenu-btn has-arrow p-3 cursor-pointer select-none" aria-expanded="false" role="menu">
+												<span class="text-sm text-center uppercase tracking-wider font-bold hover:text-primary-color transition-all duration-300">Chocolates</span>
+											</div>
+											<div class="metismenu-content">
+												<ul>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Chocolate</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Chocolate with raisins</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Chocolate with Almonds</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">White Chocolate</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="border-b">
+											<div class="metismenu-btn has-arrow p-3 cursor-pointer select-none" aria-expanded="false" role="menu">
+												<span class="text-sm text-center uppercase tracking-wider font-bold hover:text-primary-color transition-all duration-300">Creams</span>
+											</div>
+											<div class="metismenu-content">
+												<ul>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Swiss Cream</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Vanilla</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">American Cream</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Coffe</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="border-b">
+											<div class="metismenu-btn has-arrow p-3 cursor-pointer select-none" aria-expanded="false" role="menu">
+												<span class="text-sm text-center uppercase tracking-wider font-bold hover:text-primary-color transition-all duration-300">Fruit</span>
+											</div>
+											<div class="metismenu-content">
+												<ul>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Raspberry</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Lemon</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Apple</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Grape</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Cherry</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="border-b">
+											<div class="metismenu-btn has-arrow p-3 cursor-pointer select-none" aria-expanded="false" role="menu">
+												<span class="text-sm text-center uppercase tracking-wider font-bold hover:text-primary-color transition-all duration-300">Dulce de Leche</span>
+											</div>
+											<div class="metismenu-content">
+												<ul>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Dulce de Leche</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Dulce de Leche Brownie</a></li>
+													<li class="py-2 pl-5 border-t"><a class="hover:text-primary-color transition-all duration-300" href="#">Dulce de Leche Caramelized</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<form class="order-3 lg:order-2 flex w-full h-[50px] overflow-hidden rounded" action="#">
+						<input class="input-rounded-l w-full h-full rounded-l border-2 border-white border-r-0" type="search" placeholder="What do you need?" />
+						<button class="bg-primary-color hover:bg-primary-hover uppercase font-bold tracking-wider text-white p-2 px-4 transition-all duration-300" type="submit">
+							<i class="bi bi-search flex"></i>
+						</button>
+					</form>
+					<div class="order-2 lg:order-3 hidden sm:flex items-center">
+						<i class="bi bi-telephone-fill flex text-xl text-primary-color bg-white shadow rounded-full p-4"></i>
+						<div class="flex-col w-max ml-4">
+							<a href="#" class="font-bold block">+88 88.888.888</a>
+							<span class="text-sm">support 24/7</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <div class="error-section container m-auto px-2 xs:px-8 my-5">
+            <div class="flex flex-col gap-2 items-center text-center">
+                <span class="text-8xl text-gray-400">404</span>
+                <h1 class="uppercase text-primary-color text-4xl">Page not found</h1>
+                <p class="text-lg">The page your are looking for does not exist. It might have been moved or delete.</p>
+                <a class="bg-primary-color hover:bg-primary-hover rounded p-2 px-3 text-white uppercase font-bold tracking-wider transition-all duration-300" href="index.html">
+                    <span>Go Back Home</span>
+                </a>
+            </div>
+        </div>
+
+		<!-- Modals -->
+		<div class="menu-mob modal bg-overlay fixed z-50 h-full w-full inset-0 invisible opacity-0 transition-all duration-300">
+			<div class="flex h-full w-full">
+				<div class="modal-content relative bg-secondary-color h-full w-[288px] min-w-[250px] left-[-999px] mr-auto transition-all duration-300 flex flex-col">
+					<div class="p-4">
+						<div class="flex justify-between items-center pb-10">
+							<div class="h-[40px]">
+								<img class="h-full" src="./img/logo.png" alt="img" />
+							</div>
+							<button class="btn-close-modal p-2">
+								<i class="bi bi-x-lg text-primary-color text-xl text-stroke-medium pointer-events-none"></i>
+							</button>
+						</div>
+						<div class="justify-end items-center gap-5 flex">
+							<div class="relative group">
+								<a class="group-hover:text-primary-color transition-all duration-300" href="wishlist.html">
+									<i class="bi bi-heart text-[35px] transform translate-y-1 text-stroke-thin flex pointer-events-none"></i>
+								</a>
+								<span class="group-hover:bg-white group-hover:text-primary-color group-hover:shadow badge absolute top-0 right-[-6px] h-[15px] min-w-[15px] px-[2px] transition-all duration-300">0</span>
+							</div>
+							<div class="flex gap-1">
+								<div class="relative group">
+									<a class="group-hover:text-primary-color transition-all duration-300" href="shopping-cart.html">
+										<i class="bi bi-cart3 text-[35px] flex pointer-events-none"></i>
+									</a>
+									<span class="group-hover:bg-white group-hover:text-primary-color group-hover:shadow badge absolute top-0 right-[-6px] h-[15px] min-w-[15px] px-[2px] transition-all duration-300">0</span>
+								</div>
+								<span class="font-bold place-self-end leading-none">$0.00</span>
+							</div>
+						</div>
+					</div>
+					<nav class="h-full overflow-auto">
+						<ul class="metismenu uppercase tracking-wider text-sm font-bold border-b">
+							<li class="border-t">
+								<a class="flex transition-all duration-300 hover:text-primary-color p-3" href="index.html">
+									<span>Home</span>
+								</a>
+							</li>
+							<li class="border-t">
+								<a class="flex transition-all duration-300 hover:text-primary-color p-3" href="my-account.html">
+									<span>My Account</span>
+								</a>
+							</li>
+							<li class="border-t">
+								<div class="metismenu-btn has-arrow flex items-center justify-between p-3 transition-all duration-300 hover:text-primary-color cursor-pointer">
+									<span>Shop</span>
+								</div>
+								<ul class="metismenu-content transition-all duration-300">
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="shop-grid.html">
+											<span class="py-[10px] pl-[20px]">Shop Grid</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="shop-listed.html">
+											<span class="py-[10px] pl-[20px]">Shop Listed</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="shop-mixed.html">
+											<span class="py-[10px] pl-[20px]">Shop Mixed</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="border-t">
+								<div class="metismenu-btn has-arrow flex items-center justify-between p-3 transition-all duration-300 hover:text-primary-color cursor-pointer">
+									<span>Pages</span>
+								</div>
+								<ul class="metismenu-content transition-all duration-300">
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="product-details.html">
+											<span class="py-[10px] pl-[20px]">Product Details</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="wishlist.html">
+											<span class="py-[10px] pl-[20px]">Wishlist</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="shopping-cart.html">
+											<span class="py-[10px] pl-[20px]">Shopping Cart</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="checkout.html">
+											<span class="py-[10px] pl-[20px]">Checkout</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="purchase-completed.html">
+											<span class="py-[10px] pl-[20px]">Purchase Completed</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="purchase-failed.html">
+											<span class="py-[10px] pl-[20px]">Purchase Failed</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="error404.html">
+											<span class="py-[10px] pl-[20px]">Error 404</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="my-account.html">
+											<span class="py-[10px] pl-[20px]">My Account</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="login.html">
+											<span class="py-[10px] pl-[20px]">Login</span>
+										</a>
+									</li>
+									<li class="border-t">
+										<a class="flex transition-all duration-300 hover:text-primary-color" href="sign-up.html">
+											<span class="py-[10px] pl-[20px]">Sign Up</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="border-t">
+								<a class="flex transition-all duration-300 hover:text-primary-color p-3" href="contact-us.html">
+									<span>Contact Us</span>
+								</a>
+							</li>
+							<li class="border-t">
+								<a class="btn-open-modal flex transition-all duration-300 hover:text-primary-color p-3 active" href="javascript:void(0)" data-target=".login-modal">
+									<span class="pointer-events-none">Log In</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="login-modal modal bg-overlay flex flex-col justify-start items-center fixed z-50 h-full w-full inset-0 invisible opacity-0 transition-all duration-300 overflow-auto">
+			<div class="flex justify-center my-10 w-full">
+				<div class="login-content relative modal-content w-[500px] min-w-[250px] bg-secondary-color rounded-lg px-3 pb-3 xs:px-5 xs:pb-5 pt-7 mx-3 md:m-5 transition-all duration-300">
+					<button class="btn-close-modal absolute top-0 right-0 sm:text-white sm:bg-primary-color sm:hover:bg-primary-hover transition-all duration-300 p-2 sm:-top-4 sm:-right-4 sm:rounded-full sm:p-3">
+						<i class="bi bi-x-lg flex text-stroke-medium pointer-events-none"></i>
+					</button>
+					<div class="flex flex-col gap-5">
+						<h1 class="font-bold text-xl text-center">Login with</h1>
+						<div class="flex flex-wrap gap-5 lg:flex-row justify-center">
+							<button class="inline-flex justify-center items-center bg-white hover:shadow-md h-[56px] w-full sm:w-[220px] sm:min-w-[200px] transition-all duration-300">
+								<svg class="mr-2 h-[40px] w-[40px]" xmlns="http://www.w3.org/2000/svg" width="1365.12" height="1365.12" viewBox="0 0 14222 14222">
+									<circle cx="7111" cy="7112" r="7111" fill="#1977f3" />
+									<path d="M9879 9168l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4969c362 57 733 86 1111 86s749-30 1111-86V9168z" fill="#fff" />
+								</svg>
+								<span class="font-bold text-[#636469]">Facebook</span>
+							</button>
+							<button class="inline-flex justify-center items-center bg-white hover:shadow-md h-[56px] w-full sm:w-[220px] sm:min-w-[200px] transition-all duration-300">
+								<svg class="mr-2 h-[40px] w-[40px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+									<defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" /></defs>
+									<clipPath id="b"><use xlink:href="#a" overflow="visible" /></clipPath>
+									<path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+									<path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+									<path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+									<path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+								</svg>
+								<span class="font-bold text-[#636469]">Google</span>
+							</button>
+						</div>
+						<span class="or flex items-center">
+							<span class="text-sm uppercase mx-2">Or</span>
+						</span>
+						<form action="#">
+							<div class="flex flex-col gap-2">
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-person absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="text" placeholder="Username or Email" required="" />
+								</div>
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-lock absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="password" placeholder="Password" required="" />
+								</div>
+								<button class="bg-primary-color hover:bg-primary-hover text-white font-bold uppercase tracking-wider rounded w-full transition-all duration-300 p-2" type="submit">
+									<span>Login</span>
+								</button>
+							</div>
+							<div class="flex flex-wrap gap-4 justify-between items-center relative mt-2 after:h-px after:w-full after:bg-gray-300 after:absolute after:-bottom-2">
+								<label class="flex items-center gap-2 select-none">
+									<input type="checkbox" class="checkbox" />
+									<span>Remember</span>
+								</label>
+								<a class="hover:underline text-[#3091ff]" href="#">Forgot Password?</a>
+							</div>
+						</form>
+						<div class="text-center">
+							<span class="block">Don't have a account?</span>
+							<button class="btn-toggle-modal bg-primary-color hover:bg-primary-hover shadow hover:shadow-md rounded text-white py-2 px-3 mt-2 transition-all duration-300" data-target=".sign-up-modal">Create one</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sign-up-modal modal bg-overlay flex flex-col justify-start items-center fixed z-50 h-full w-full inset-0 invisible opacity-0 transition-all duration-300 overflow-auto">
+			<div class="flex justify-center my-10 w-full">
+				<div class="sign-up-content relative modal-content w-[500px] min-w-[250px] bg-secondary-color rounded-lg px-3 pb-3 xs:px-5 xs:pb-5 pt-7 mx-3 md:m-5 transition-all duration-300">
+					<button class="btn-close-modal absolute top-0 right-0 sm:text-white sm:bg-primary-color sm:hover:bg-primary-hover transition-all duration-300 p-2 sm:-top-4 sm:-right-4 sm:rounded-full sm:p-3">
+						<i class="bi bi-x-lg flex text-stroke-medium pointer-events-none"></i>
+					</button>
+					<div class="flex flex-col gap-5">
+						<h1 class="font-bold text-xl text-center">Sign Up</h1>
+						<div class="flex flex-wrap gap-5 lg:flex-row justify-center">
+							<button class="inline-flex justify-center items-center bg-white hover:shadow-md h-[56px] w-full sm:w-[220px] sm:min-w-[200px] transition-all duration-300">
+								<svg class="mr-2 h-[40px] w-[40px]" xmlns="http://www.w3.org/2000/svg" width="1365.12" height="1365.12" viewBox="0 0 14222 14222">
+									<circle cx="7111" cy="7112" r="7111" fill="#1977f3" />
+									<path d="M9879 9168l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4969c362 57 733 86 1111 86s749-30 1111-86V9168z" fill="#fff" />
+								</svg>
+								<span class="font-bold text-[#636469]">Facebook</span>
+							</button>
+							<button class="inline-flex justify-center items-center bg-white hover:shadow-md h-[56px] w-full sm:w-[220px] sm:min-w-[200px] transition-all duration-300">
+								<svg class="mr-2 h-[40px] w-[40px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+									<defs><path id="a1" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" /></defs>
+									<clipPath id="b1"><use xlink:href="#a1" overflow="visible" /></clipPath>
+									<path clip-path="url(#b1)" fill="#FBBC05" d="M0 37V11l17 13z" />
+									<path clip-path="url(#b1)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+									<path clip-path="url(#b1)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+									<path clip-path="url(#b1)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+								</svg>
+								<span class="font-bold text-[#636469]">Google</span>
+							</button>
+						</div>
+						<span class="or flex items-center">
+							<span class="text-sm uppercase mx-2">Or</span>
+						</span>
+						<form action="#">
+							<div class="flex flex-col gap-2">
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-person absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="text" placeholder="Your Name" required="" />
+								</div>
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-envelope absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="password" placeholder="Email" required="" />
+								</div>
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-lock absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="password" placeholder="Password" required="" />
+								</div>
+								<div class="relative flex items-center h-[40px]">
+									<i class="bi bi-lock-fill absolute text-gray-500 text-2xl ml-3"></i>
+									<input class="input pl-10" type="text" placeholder="Confirm your Password" required="" />
+								</div>
+								<button class="bg-primary-color hover:bg-primary-hover text-white font-bold uppercase tracking-wider rounded w-full transition-all duration-300 p-2" type="submit">
+									<span>Sign Up</span>
+								</button>
+							</div>
+							<div class="relative mt-2 after:h-px after:w-full after:bg-gray-300 after:absolute after:-bottom-2">
+								<label class="flex items-center gap-2 select-none">
+									<input type="checkbox" class="checkbox" />
+									<span>I agree with all <a class="hover:underline text-[#3091ff]" href="#">Terms of Use</a> &amp; <a class="hover:underline text-[#3091ff]" href="#">Privacy Policy</a>.</span>
+								</label>
+							</div>
+						</form>
+						<div class="text-center">
+							<span class="block">Do you already have an account?</span>
+							<button class="btn-toggle-modal bg-primary-color hover:bg-primary-hover shadow hover:shadow-md rounded text-white py-2 px-3 mt-2 transition-all duration-300" data-target=".login-modal">Log in</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- -->
+
+		<div class="loader fixed z-[999] flex justify-center items-center w-screen h-screen bg-gray-50">
+			<div class="loader-content flex flex-col items-center gap-2">
+				<span class="text-3xl font-bold text-gray-200">COLOMBO</span>
+				<div class="flex min-w-[170px] overflow-hidden">
+    	            <div class="animation-loader relative h-2 w-2 rounded-full"></div>
+    	        </div>
+			</div>
+		</div>
+
+		<div class="go-top-container fixed right-8 sm:right-16 -bottom-16 transition-all duration-300">
+			<div class="w-10 h-10 z-50 text-white text-xl bg-primary-color hover:bg-primary-hover shadow hover:shadow-md flex justify-center items-center rounded select-none cursor-pointer transition-all duration-300">
+				<i class="bi bi-chevron-up"></i>
+			</div>
+		</div>
+
+		<footer class="bg-secondary-color lg:py-5 mt-auto">
+			<div class="grid grid-cols-12 gap-5 container mx-auto py-5 px-5">
+				<div class="col-span-12 sm:col-span-6 lg:col-span-4 flex flex-col gap-2">
+					<div class="mb-4">
+						<img src="./img/logo.png" alt="img" />
+					</div>
+					<div class="flex items-center gap-2">
+						<i class="bi bi-geo-alt flex text-xl text-primary-color text-stroke-medium"></i>
+						<span>Colón 0101, Olavarría</span>
+					</div>
+					<div class="flex items-center gap-2">
+						<i class="bi bi-telephone flex text-xl text-primary-color text-stroke-medium"></i>
+						<a href="#">0101-010101</a>
+					</div>
+					<div class="flex items-center gap-2">
+						<i class="bi bi-envelope flex text-xl text-primary-color text-stroke-medium"></i>
+						<a href="#">colombo@example.com</a>
+					</div>
+				</div>
+				<div class="col-span-12 sm:col-span-6 lg:col-span-4">
+					<h6 class="font-extrabold pb-2">Useful Links</h6>
+					<ul class="text-sm flex flex-col flex-wrap xs:max-h-[200px] gap-2">
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Terms & Conditions</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">New products</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Best sales</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Secure payment</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Services</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Delivery</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Legal Notice</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">About us</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Contact us</a></li>
+						<li class="group relative flex items-center hover:text-primary-color transition-all duration-300"><span class="invisible group-hover:visible absolute select-none text-primary-color -left-6">&#10230;</span><a href="#">Stores</a></li>
+					</ul>
+				</div>
+				<div class="col-span-12 lg:col-span-4 flex flex-col gap-2">
+					<h6 class="font-extrabold pb-2">Be the first to know it</h6>
+					<p class="text-sm">Subscribe to receive updates on our store and special offers</p>
+					<form class="flex w-full h-10 overflow-hidden rounded">
+						<input class="input-rounded-l border-white" type="email" id="email" placeholder="Enter your email" />
+						<button class="bg-primary-color hover:bg-primary-hover w-24 h-full flex items-center justify-center transition-all duration-300">
+							<i class="bi bi-send flex text-white text-xl"></i>
+						</button>
+					</form>
+					<div class="flex items-center gap-4">
+						<div class="bg-white shadow hover:bg-primary-color hover:text-white rounded-full h-12 w-12 transition-all duration-300">
+							<a class="h-12 w-12 flex justify-center items-center" href="#">
+								<i class="bi bi-facebook flex text-xl"></i>
+							</a>
+						</div>
+						<div class="bg-white shadow hover:bg-primary-color hover:text-white rounded-full h-12 w-12 transition-all duration-300">
+							<a class="h-12 w-12 flex justify-center items-center" href="#">
+								<i class="bi bi-twitter flex text-xl"></i>
+							</a>
+						</div>
+						<div class="bg-white shadow hover:bg-primary-color hover:text-white rounded-full h-12 w-12 transition-all duration-300">
+							<a class="h-12 w-12 flex justify-center items-center" href="#">
+								<i class="bi bi-instagram flex text-xl"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./plugins/nice-select2/nice-select2.js"></script>
+		<script src="https://unpkg.com/metismenujs/dist/metismenujs.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
