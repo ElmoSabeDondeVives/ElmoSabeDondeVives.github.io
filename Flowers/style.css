@@ -20,7 +20,7 @@
     width: 100vw;
     background-color: var(--dark-color);
     overflow: hidden;
-    perspective: 1000px;
+ /*   perspective: 1000px;*/
 }
 
 .night {
