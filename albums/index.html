@@ -252,29 +252,14 @@
     }
 
     // add background music
-    /*if (bgMusicURL) {
+    if (bgMusicURL) {
         document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} start="01:30" autoplay="autoplay" loop>
+<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''}  autoplay="autoplay" loop>
 <p>If you are reading this, it is because your browser does not support the audio element.</p>
 </audio>
 `;
-    }*/
-    if (bgMusicURL) {
-        const audio = new Audio(bgMusicURL);
-        audio.controls = bgMusicControls;
-        audio.autoplay = true;
-        audio.loop = true;
-
-        // Evento que se ejecuta cuando el audio está cargado y listo para reproducirse
-        audio.addEventListener('loadedmetadata', function() {
-            // Establece el tiempo de inicio en 1 minuto y 30 segundos (90 segundos)
-            audio.currentTime = 12;
-        });
-
-        document.getElementById('music-container').appendChild(audio);
-    } else {
-        document.getElementById('music-container').innerHTML = "<p>If you are reading this, it is because your browser does not support the audio element.</p>";
     }
+
 
     // setup events
     document.onpointerdown = function (e) {
