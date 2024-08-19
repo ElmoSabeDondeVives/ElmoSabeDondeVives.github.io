@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Videos en Pantalla Completa</title>
+    <title>Reproductor de Videos</title>
     <style>
         html, body {
             margin: 0;
@@ -34,7 +34,7 @@
         'Hll-WMi0wfo',
         'nV-MNkgXD5c',
         'HrqPoiTLWpw',
-        'ZsVt9TkszTI&t',
+        'ZsVt9TkszTI',
         '0LFN1Lvdjr4',
         '58sgKEfEbmE',
         'djp91oHYC6M',
@@ -44,26 +44,63 @@
         '7G23CxJifDw',
         '_D_Jmsp2CYE',
         'ZZ2NjOPKJ1U',
-        'WY7VsIUYt50'
+        'WY7VsIUYt50',
+        'OSDAlI_8WGc',
+        'zHP433m2SX0',
+        'waVkgSYYCRE',
+        '3OW8G86ujBI',
+        'vOk0MSCa77o',
+        '1SVdL5nTxZo',
+        'y4ZRkTlnoXQ',
+        '9F840GSONGA',
+        '910liBR0ffg',
+        'Yva9qnOwefA',
+        '6_2Fgcp9xjs',
+        '9t2unaxKKwoQ',
+        'Bzb0vbzAI3Q',
+        '7nrON9V3w8k',
+        'wSe2ZmYpLQM',
+        'qPoN6lN3ZFw',
+        'xXYvq5HgYhk',
+        'PPKKfzHt7OY',
+        'XvTPLGxYSfk'
     ];
     let currentIndex = 0;
     let player;
 
     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            videoId: videos[currentIndex],
-            events: {
-                'onStateChange': onPlayerStateChange
-            }
-        });
+        loadVideo(currentIndex);
+    }
+
+    function loadVideo(index) {
+        if (index < videos.length) {
+            player = new YT.Player('player', {
+                videoId: videos[index],
+                events: {
+                    'onStateChange': onPlayerStateChange,
+                    'onError': onPlayerError
+                }
+            });
+        }
     }
 
     function onPlayerStateChange(event) {
         if (event.data === YT.PlayerState.ENDED) {
-            currentIndex++;
-            if (currentIndex < videos.length) {
-                player.loadVideoById(videos[currentIndex]);
-            }
+            nextVideo();
+        }
+    }
+
+    function onPlayerError(event) {
+        console.error('Error en el video:', videos[currentIndex]);
+        nextVideo();
+    }
+
+    function nextVideo() {
+        currentIndex++;
+        if (currentIndex < videos.length) {
+            loadVideo(currentIndex);
+        } else {
+            console.log('Se han reproducido todos los videos.');
         }
     }
 
