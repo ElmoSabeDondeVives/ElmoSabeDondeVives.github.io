@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Videos en Pantalla Completa</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="player"></div>
+<script>
+    const videos = [
+        'HUyvB7vJ7CQ',
+        'Eyne8EVEKuo',
+        'yChWPysjYWw',
+        '9ZoZ858BWUA',
+        'ovZWbJGZA3k',
+        'Prvi8aB4Fsc',
+        'Fe5yc3DG7DA',
+        'Hll-WMi0wfo',
+        'nV-MNkgXD5c',
+        'HrqPoiTLWpw',
+        'ZsVt9TkszTI&t',
+        '0LFN1Lvdjr4',
+        '58sgKEfEbmE',
+        'djp91oHYC6M',
+        'z2KrX2fu0dw',
+        'jhBXyrpbcG0',
+        'O1RHw4i_MlY',
+        '7G23CxJifDw',
+        '_D_Jmsp2CYE',
+        'ZZ2NjOPKJ1U',
+        'WY7VsIUYt50'
+    ];
+    let currentIndex = 0;
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: videos[currentIndex],
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+            currentIndex++;
+            if (currentIndex < videos.length) {
+                player.loadVideoById(videos[currentIndex]);
+            }
+        }
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(script);
+</script>
+</body>
+</html>
