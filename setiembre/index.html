@@ -6,9 +6,31 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
 <!-- partial:index.partial.html -->
 <body class="container">
+<style>
+  #overlayText {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e7c500; /* Color amarillo dorado neón */
+    font-size: 40px;
+    z-index: 9999; /* Para asegurarte de que esté encima de otros elementos */
+    text-align: center;
+    width: 60%; /* Ajusta el ancho del contenedor para que la justificación sea efectiva */
+    text-shadow:
+            0 0 2px #e7c500,   /* Sombra más pegada a la letra */
+            0 0 5px #e7c500,  /* Segundo nivel de brillo */
+            0 0 10px #c4a600,  /* Sombra ligeramente más oscura */
+            0 0 10px #c4a600;  /* Último nivel de sombra para el efecto neón */
+  }
+
+
+</style>
+<h1 id="overlayText">Vi esta flor y pensé en ti porque es bonita, en realidad a mí no me gusta, pero pensé que a ti te gustaría, porque
+  <br> TÚ SÍ ERES BONITA <br> Paolita 🌹 </h1>
+
   <div class="night"></div>
   <div class="flowers">
     <div class="flower flower--1">
