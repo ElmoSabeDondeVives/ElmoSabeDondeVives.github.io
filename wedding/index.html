@@ -44,8 +44,8 @@
 		
 		<div class="container">
 		
-			<a class="logo fluidbox__instance-1 fluidbox--initialized fluidbox--closed fluidbox--ready" ><div class="fluidbox__wrap" style="z-index: 990;"><img src="images/logo-white.png" alt="Logo" fetchpriority="high" decoding="sync" class="fluidbox__thumb" style="opacity: 1;"><div class="fluidbox__ghost" style="width: 124px; height: 44px; top: 0px; left: 0px;"></div></div></a>
-			
+			<!-- <a class="logo fluidbox__instance-1 fluidbox--initialized fluidbox--closed fluidbox--ready" ><div class="fluidbox__wrap" style="z-index: 990;"><img src="images/logo-white.png" alt="Logo" fetchpriority="high" decoding="sync" class="fluidbox__thumb" style="opacity: 1;"><div class="fluidbox__ghost" style="width: 124px; height: 44px; top: 0px; left: 0px;"></div></div></a>
+			 -->
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="icon icon-bars"></i></div>
 			
 			<ul class="main-menu visible-on-click" id="main-menu">
@@ -305,10 +305,23 @@ Un momento lleno de amor, unión y alegría, donde celebraremos nuestro “sí�
 		<div class="container center-text">
 			
 			<div class="logo-wrapper">
-				<a class="logo fluidbox__instance-8 fluidbox--initialized fluidbox--closed fluidbox--ready" href="#"><div class="fluidbox__wrap" style="z-index: 990;"><img src="images/logo-black.png" alt="Logo Image" loading="lazy" decoding="async" class="fluidbox__thumb" style="opacity: 1;"><div class="fluidbox__ghost" style="width: 124px; height: 44px; top: 0px; left: 493px;"></div></div></a>
-				<i class="icon icon-star"></i>
+				<!-- <a class="logo fluidbox__instance-8 fluidbox--initialized fluidbox--closed fluidbox--ready" href="#"><div class="fluidbox__wrap" style="z-index: 990;"><img src="images/logo-black.png" alt="Logo Image" loading="lazy" decoding="async" class="fluidbox__thumb" style="opacity: 1;"><div class="fluidbox__ghost" style="width: 124px; height: 44px; top: 0px; left: 493px;"></div></div></a>
+				--><i class="icon icon-star"></i> 
 			</div>
-			
+			<div class="newsletter">
+				<h4 class="title">CONFIRMAR ASISTENCIA</h4>
+				<p>Haz clic y envíanos tu confirmación por WhatsApp 💬</p>
+
+				<div class="email-area">
+					<form onsubmit="enviarWhatsApp(); return false;">
+						<input class="email-input" type="text" id="nombreInvitado" placeholder="Tu nombre">
+						<button class="submit-btn" type="submit">
+							<i class="icon icon-email-plane"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+
 			<!-- <div class="newsletter">
 				<h4 class="title">RECEIVE NEWS IN YOUR EMAIL</h4>
 				<p>Join our mailing list to receive news and announcements</p>
@@ -362,6 +375,24 @@ Un momento lleno de amor, unión y alegría, donde celebraremos nuestro “sí�
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
+function enviarWhatsApp(){
+	let nombre = document.getElementById("nombreInvitado").value;
+
+	if(nombre.trim() === ""){
+		alert("Por favor escribe tu nombre 😊");
+		return;
+	}
+
+	let telefono = "51916161333"; // 👈 cambia por el número real
+	let mensaje = "Hola, soy " + nombre + " y confirmo mi asistencia a la boda 💍✨";
+
+	let url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+	window.open(url, "_blank");
+}
+</script>
+
+<script>
+	
 	$(function () {
 
     $('#clock').countdown('2026/02/28 18:00:00', function(event) {
