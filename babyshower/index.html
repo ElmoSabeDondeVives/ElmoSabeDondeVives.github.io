@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baby Shower - Aitana Salomé</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --rosa:#F8D0DA;
+    --rosa2:#F4B6C6;
+    --crema:#FFF4D6;
+    --amarillo:#FFD966;
+    --texto:#6D4C41;
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(255,248,251,.55),
+            rgba(255,244,231,.55)
+        ),
+        url('img/patron.png');
+
+    background-size:100% auto;
+    background-repeat:repeat-y;
+    background-position:center top;
+
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.hero-content{
+
+    max-width:700px;
+
+    background:rgba(255,255,255,.40);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    padding:50px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.08);
+}
+
+.subtitle{
+
+    letter-spacing:4px;
+    color:#c48a9f;
+    font-weight:600;
+}
+
+.title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:6rem;
+
+    margin:20px 0;
+
+    color:#d77b9c;
+
+    text-shadow:
+        0 0 25px rgba(255,255,255,.9),
+        0 5px 15px rgba(0,0,0,.08);
+}
+
+.hero p{
+
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:#d77b9c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(215,123,156,.35);
+}
+
+/* GENERAL */
+
+.section{
+
+    padding:100px 20px;
+}
+
+.container{
+
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    color:#d77b9c;
+
+    margin-bottom:40px;
+}
+
+/* TARJETAS */
+
+.card,
+.info-box,
+.time-box{
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+
+    border-radius:30px;
+}
+
+/* MENSAJE */
+
+.card{
+
+    padding:50px;
+    text-align:center;
+}
+
+.card p{
+
+    line-height:2;
+}
+
+/* INFO */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.info-box{
+
+    padding:40px;
+    text-align:center;
+}
+
+.info-box h3{
+
+    color:#d77b9c;
+
+    margin-bottom:15px;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.time-box{
+
+    padding:30px;
+    text-align:center;
+}
+
+.time-box span{
+
+    display:block;
+
+    font-size:2.5rem;
+
+    font-weight:bold;
+
+    color:#d77b9c;
+}
+
+/* WHATSAPP */
+
+.confirm{
+
+    text-align:center;
+}
+
+.whatsapp{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#25D366;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(37,211,102,.35);
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#b88a9a;
+
+    font-size:.95rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .title{
+        font-size:4rem;
+    }
+
+    .section-title{
+        font-size:3rem;
+    }
+
+    .countdown{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-content{
+        padding:35px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">
+            BABY SHOWER
+        </div>
+
+        <h1 class="title">
+            Aitana Salomé
+        </h1>
+
+        <p>
+            Una dulce bendición viene en camino.
+            Te invitamos a compartir con nosotros
+            este hermoso momento lleno de amor,
+            alegría y mucha ilusión.
+        </p>
+
+        <a href="#evento" class="btn">
+            Ver Invitación
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section" id="evento">
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2 class="section-title">
+                Te Invitamos
+            </h2>
+
+            <p>
+                Con mucha alegría esperamos la llegada de nuestra pequeña princesa.
+                Queremos compartir contigo este momento tan especial y celebrar juntos
+                la próxima llegada de <strong>Aitana Salomé</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Información del Evento
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <h3>📅 Fecha</h3>
+                <p>POR DEFINIR</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🕒 Hora</h3>
+                <p>POR DEFINIR</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📍 Lugar</h3>
+                <p>POR DEFINIR</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Cuenta Regresiva
+        </h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                Días
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                Horas
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                Minutos
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                Segundos
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card confirm">
+
+            <h2 class="section-title">
+                Confirma tu Asistencia
+            </h2>
+
+            <p>
+                Será un placer compartir este hermoso momento contigo.
+            </p>
+
+            <a href="#" class="whatsapp">
+                Confirmar por WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    🌼 🐝 🌼 🐝 🌼
+
+    <br><br>
+
+    Con cariño para nuestra pequeña
+
+    <br>
+
+    <strong>Aitana Salomé</strong>
+
+</footer>
+
+<script>
+
+// FECHA DEL EVENTO
+// REEMPLAZAR
+
+const fechaEvento = new Date("2026-12-31 18:00:00");
+
+function actualizarContador(){
+
+    const ahora = new Date();
+
+    const diferencia =
+        fechaEvento - ahora;
+
+    if(diferencia <= 0){
+        return;
+    }
+
+    const dias =
+        Math.floor(diferencia / 1000 / 60 / 60 / 24);
+
+    const horas =
+        Math.floor((diferencia / 1000 / 60 / 60) % 24);
+
+    const minutos =
+        Math.floor((diferencia / 1000 / 60) % 60);
+
+    const segundos =
+        Math.floor((diferencia / 1000) % 60);
+
+    document.getElementById('days').innerText = dias;
+    document.getElementById('hours').innerText = horas;
+    document.getElementById('minutes').innerText = minutos;
+    document.getElementById('seconds').innerText = segundos;
+}
+
+setInterval(actualizarContador,1000);
+
+actualizarContador();
+
+</script>
+
+</body>
+</html>
