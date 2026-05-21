@@ -826,6 +826,61 @@ setInterval(actualizarContador,1000);
 actualizarContador();
 
 </script>
+<script>
+
+const icons = [
+    "🍯",
+    "🐝"
+];
+
+let index = 0;
+
+function createFavicon(emoji){
+
+    const canvas =
+        document.createElement('canvas');
+
+    canvas.width = 64;
+    canvas.height = 64;
+
+    const ctx =
+        canvas.getContext('2d');
+
+    ctx.font = '56px serif';
+
+    ctx.fillText(
+        emoji,
+        0,
+        54
+    );
+
+    return canvas.toDataURL();
+}
+
+const favicon =
+document.createElement('link');
+
+favicon.rel = 'icon';
+
+document.head.appendChild(
+    favicon
+);
+
+setInterval(()=>{
+
+    favicon.href =
+    createFavicon(
+        icons[index]
+    );
+
+    index =
+    (index + 1)
+    %
+    icons.length;
+
+},1000);
+
+</script>
 
 </body>
 </html>
