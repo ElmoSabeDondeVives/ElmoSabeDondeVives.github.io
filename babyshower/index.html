@@ -7,6 +7,7 @@
 <title>Baby Shower - Aitana Salomé</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -14,11 +15,8 @@
     --rosa:#F8D0DA;
     --rosa2:#F4B6C6;
     --crema:#FFF4D6;
-    --amarillo:#FFD966;
     --texto:#6D4C41;
 }
-
-/* RESET */
 
 *{
     margin:0;
@@ -36,20 +34,66 @@ body{
 
     background:
         linear-gradient(
-            rgba(255,248,251,.55),
-            rgba(255,244,231,.55)
+            rgba(255,248,251,.40),
+            rgba(255,244,231,.40)
         ),
         url('img/patron.png');
 
-    background-size:100% auto;
-    background-repeat:repeat-y;
-    background-position:center top;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 
     color:var(--texto);
     overflow-x:hidden;
 }
 
-/* HERO */
+/* ==========================
+   ABEJA VOLADORA
+========================== */
+
+.bee-lottie{
+
+    position:fixed;
+
+    width:120px;
+    height:120px;
+
+    top:120px;
+    left:-150px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:flyingBee 20s linear infinite;
+}
+
+@keyframes flyingBee{
+
+    0%{
+        transform:translateX(0) translateY(0);
+    }
+
+    25%{
+        transform:translateX(25vw) translateY(-50px);
+    }
+
+    50%{
+        transform:translateX(50vw) translateY(30px);
+    }
+
+    75%{
+        transform:translateX(75vw) translateY(-30px);
+    }
+
+    100%{
+        transform:translateX(120vw) translateY(0);
+    }
+}
+
+/* ==========================
+   HERO
+========================== */
 
 .hero{
 
@@ -59,34 +103,33 @@ body{
     justify-content:center;
     align-items:center;
 
-    text-align:center;
-
     padding:40px 20px;
 }
 
-.hero-content{
+.hero-card{
 
-    max-width:700px;
+    max-width:800px;
 
-    background:rgba(255,255,255,.40);
+    text-align:center;
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    background:rgba(255,255,255,.65);
 
-    padding:50px;
+    backdrop-filter:blur(15px);
 
-    border-radius:30px;
+    border-radius:35px;
 
-    border:1px solid rgba(255,255,255,.4);
+    padding:60px;
 
     box-shadow:
-        0 10px 40px rgba(0,0,0,.08);
+        0 15px 40px rgba(0,0,0,.10);
 }
 
 .subtitle{
 
     letter-spacing:4px;
+
     color:#c48a9f;
+
     font-weight:600;
 }
 
@@ -96,19 +139,18 @@ body{
 
     font-size:6rem;
 
-    margin:20px 0;
-
     color:#d77b9c;
 
+    margin:20px 0;
+
     text-shadow:
-        0 0 25px rgba(255,255,255,.9),
-        0 5px 15px rgba(0,0,0,.08);
+        0 0 20px rgba(255,255,255,.8);
 }
 
-.hero p{
+.hero-text{
 
-    line-height:1.9;
     font-size:1.1rem;
+    line-height:1.9;
 }
 
 .btn{
@@ -117,15 +159,15 @@ body{
 
     margin-top:30px;
 
+    padding:16px 45px;
+
     background:#d77b9c;
 
     color:white;
 
-    text-decoration:none;
-
-    padding:15px 40px;
-
     border-radius:50px;
+
+    text-decoration:none;
 
     font-weight:600;
 
@@ -140,7 +182,9 @@ body{
         0 10px 20px rgba(215,123,156,.35);
 }
 
-/* GENERAL */
+/* ==========================
+   SECCIONES
+========================== */
 
 .section{
 
@@ -159,60 +203,60 @@ body{
 
     font-family:'Great Vibes',cursive;
 
-    font-size:4rem;
-
     color:#d77b9c;
+
+    font-size:4rem;
 
     margin-bottom:40px;
 }
 
-/* TARJETAS */
+/* ==========================
+   TARJETAS
+========================== */
 
 .card,
 .info-box,
 .time-box{
 
-    background:rgba(255,255,255,.65);
+    background:rgba(255,255,255,.70);
 
     backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.45);
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.08);
 
     border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
 }
 
-/* MENSAJE */
+/* ==========================
+   PANAL
+========================== */
 
-.card{
+.hive-divider{
 
-    padding:50px;
-    text-align:center;
+    width:350px;
+
+    margin:20px auto 50px auto;
 }
 
-.card p{
-
-    line-height:2;
-}
-
-/* INFO */
+/* ==========================
+   INFO
+========================== */
 
 .info-grid{
 
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(250px,1fr));
 
     gap:25px;
 }
 
 .info-box{
 
-    padding:40px;
     text-align:center;
 }
 
@@ -223,21 +267,22 @@ body{
     margin-bottom:15px;
 }
 
-/* COUNTDOWN */
+/* ==========================
+   COUNTDOWN
+========================== */
 
 .countdown{
 
     display:grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+    repeat(4,1fr);
 
     gap:20px;
 }
 
 .time-box{
 
-    padding:30px;
     text-align:center;
 }
 
@@ -247,17 +292,14 @@ body{
 
     font-size:2.5rem;
 
-    font-weight:bold;
-
     color:#d77b9c;
+
+    font-weight:bold;
 }
 
-/* WHATSAPP */
-
-.confirm{
-
-    text-align:center;
-}
+/* ==========================
+   WHATSAPP
+========================== */
 
 .whatsapp{
 
@@ -265,30 +307,73 @@ body{
 
     margin-top:25px;
 
-    text-decoration:none;
-
-    color:white;
+    padding:15px 35px;
 
     background:#25D366;
 
-    padding:15px 35px;
+    color:white;
+
+    text-decoration:none;
 
     border-radius:50px;
 
     font-weight:600;
-
-    transition:.3s;
 }
 
-.whatsapp:hover{
+/* ==========================
+   BRILLOS
+========================== */
 
-    transform:translateY(-3px);
+.sparkle{
 
-    box-shadow:
-        0 10px 25px rgba(37,211,102,.35);
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 0 15px white;
+
+    animation:sparkle 4s infinite;
 }
 
-/* FOOTER */
+.sparkle:nth-child(2){
+
+    top:20%;
+    left:10%;
+}
+
+.sparkle:nth-child(3){
+
+    top:70%;
+    left:85%;
+}
+
+.sparkle:nth-child(4){
+
+    top:45%;
+    left:25%;
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.6);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
 
@@ -297,11 +382,11 @@ footer{
     padding:60px 20px;
 
     color:#b88a9a;
-
-    font-size:.95rem;
 }
 
-/* RESPONSIVE */
+/* ==========================
+   MOBILE
+========================== */
 
 @media(max-width:768px){
 
@@ -317,18 +402,95 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-content{
-        padding:35px;
+    .hero-card{
+        padding:40px 25px;
+    }
+
+    .hive-divider{
+        width:250px;
+    }
+
+    .bee-lottie{
+        width:90px;
+        height:90px;
+    }
+}
+/* ==========================
+   POOH PRINCIPAL
+========================== */
+
+.pooh-container{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:20px 0 30px;
+}
+
+.pooh-image{
+
+    width:380px;
+    max-width:90%;
+
+    user-select:none;
+    pointer-events:none;
+
+    filter:
+        drop-shadow(
+            0 15px 25px rgba(0,0,0,.15)
+        );
+
+    animation:floatPooh 4s ease-in-out infinite;
+}
+
+@keyframes floatPooh{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
     }
 }
 
+@media(max-width:768px){
+
+    .pooh-image{
+        width:260px;
+    }
+
+}
 </style>
 </head>
 <body>
 
+<!-- ABEJA VOLADORA -->
+
+<div class="bee-lottie">
+
+    <lottie-player
+        src="lottie/Loading Flying Beee.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay>
+    </lottie-player>
+
+</div>
+
+<!-- BRILLOS -->
+
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+
+<!-- HERO -->
+
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-card" data-aos="zoom-in">
 
         <div class="subtitle">
             BABY SHOWER
@@ -337,12 +499,19 @@ footer{
         <h1 class="title">
             Aitana Salomé
         </h1>
+        <!-- IMAGEN PRINCIPAL -->
 
-        <p>
+                <div class="pooh-container">
+
+                    <img
+                        src="img/winnie_poo.png"
+                        alt="Pooh"
+                        class="pooh-image">
+
+                </div>
+        <p class="hero-text">
             Una dulce bendición viene en camino.
-            Te invitamos a compartir con nosotros
-            este hermoso momento lleno de amor,
-            alegría y mucha ilusión.
+            Te invitamos a compartir con nosotros este hermoso momento lleno de amor y alegría.
         </p>
 
         <a href="#evento" class="btn">
@@ -353,20 +522,22 @@ footer{
 
 </section>
 
+<!-- MENSAJE -->
+
 <section class="section" id="evento">
 
     <div class="container">
 
-        <div class="card">
+        <div class="card" data-aos="fade-up">
 
             <h2 class="section-title">
                 Te Invitamos
             </h2>
 
-            <p>
-                Con mucha alegría esperamos la llegada de nuestra pequeña princesa.
-                Queremos compartir contigo este momento tan especial y celebrar juntos
-                la próxima llegada de <strong>Aitana Salomé</strong>.
+            <p style="line-height:2;text-align:center;">
+                Con mucha alegría esperamos la llegada de nuestra querida bebé.
+                Queremos compartir contigo este momento tan especial y celebrar juntos la llegada de
+                <strong>Aitana Salomé</strong>.
             </p>
 
         </div>
@@ -374,6 +545,26 @@ footer{
     </div>
 
 </section>
+
+<!-- PANAL -->
+
+<section>
+
+    <div class="hive-divider" data-aos="zoom-in">
+
+        <lottie-player
+            src="lottie/Honey Bee.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay>
+        </lottie-player>
+
+    </div>
+
+</section>
+
+<!-- INFORMACION -->
 
 <section class="section">
 
@@ -385,17 +576,17 @@ footer{
 
         <div class="info-grid">
 
-            <div class="info-box">
+            <div class="info-box" data-aos="zoom-in">
                 <h3>📅 Fecha</h3>
                 <p>POR DEFINIR</p>
             </div>
 
-            <div class="info-box">
+            <div class="info-box" data-aos="zoom-in">
                 <h3>🕒 Hora</h3>
                 <p>POR DEFINIR</p>
             </div>
 
-            <div class="info-box">
+            <div class="info-box" data-aos="zoom-in">
                 <h3>📍 Lugar</h3>
                 <p>POR DEFINIR</p>
             </div>
@@ -405,6 +596,8 @@ footer{
     </div>
 
 </section>
+
+<!-- CUENTA REGRESIVA -->
 
 <section class="section">
 
@@ -442,11 +635,13 @@ footer{
 
 </section>
 
+<!-- WHATSAPP -->
+
 <section class="section">
 
     <div class="container">
 
-        <div class="card confirm">
+        <div class="card" style="text-align:center;">
 
             <h2 class="section-title">
                 Confirma tu Asistencia
@@ -468,56 +663,53 @@ footer{
 
 <footer>
 
-    🌼 🐝 🌼 🐝 🌼
+🌼 🐝 🌼 🐝 🌼
 
-    <br><br>
+<br><br>
 
-    Con cariño para nuestra pequeña
+Con cariño para nuestra pequeña
 
-    <br>
+<br>
 
-    <strong>Aitana Salomé</strong>
+<strong>Aitana Salomé</strong>
 
 </footer>
 
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
 
-// FECHA DEL EVENTO
-// REEMPLAZAR
+AOS.init({
+    duration:1200,
+    once:true
+});
+
+// CAMBIAR FECHA DEL EVENTO
 
 const fechaEvento = new Date("2026-12-31 18:00:00");
 
 function actualizarContador(){
 
     const ahora = new Date();
+    const diferencia = fechaEvento - ahora;
 
-    const diferencia =
-        fechaEvento - ahora;
+    if(diferencia <= 0) return;
 
-    if(diferencia <= 0){
-        return;
-    }
+    document.getElementById('days').textContent =
+        Math.floor(diferencia/(1000*60*60*24));
 
-    const dias =
-        Math.floor(diferencia / 1000 / 60 / 60 / 24);
+    document.getElementById('hours').textContent =
+        Math.floor((diferencia/(1000*60*60))%24);
 
-    const horas =
-        Math.floor((diferencia / 1000 / 60 / 60) % 24);
+    document.getElementById('minutes').textContent =
+        Math.floor((diferencia/(1000*60))%60);
 
-    const minutos =
-        Math.floor((diferencia / 1000 / 60) % 60);
-
-    const segundos =
-        Math.floor((diferencia / 1000) % 60);
-
-    document.getElementById('days').innerText = dias;
-    document.getElementById('hours').innerText = horas;
-    document.getElementById('minutes').innerText = minutos;
-    document.getElementById('seconds').innerText = segundos;
+    document.getElementById('seconds').textContent =
+        Math.floor((diferencia/1000)%60);
 }
 
 setInterval(actualizarContador,1000);
-
 actualizarContador();
 
 </script>
