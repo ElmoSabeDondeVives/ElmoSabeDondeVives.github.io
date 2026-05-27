@@ -634,6 +634,33 @@ footer{
     }
 
 }
+/* ==========================
+   IMAGEN LISTA DE REGALOS
+========================== */
+
+.gift-image-container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+}
+
+.gift-image{
+
+    width:100%;
+
+    max-width:900px;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.10);
+}
 </style>
 </head>
 <body>
@@ -785,20 +812,24 @@ footer{
             Lista de Regalos
         </h2>
         <p class="gift-text">
-    Tu presencia es el regalo más importante,
-    pero si deseas obsequiar algo a nuestra pequeña,
-    aquí te dejamos algunas ideas 🎀
-</p>
-
+            Tu presencia es el regalo más importante,
+            pero si deseas obsequiar algo a nuestra pequeña,
+            aquí te dejamos algunas ideas 🎀
+        </p>
         <div class="gift-grid">
 
-            <div class="gift-card" data-aos="zoom-in">
-                <!-- Agregar Imagen  -->
-                 <img src="img/deseos.png" alt="">
+            <div class="gift-image-container">
+
+                <img
+                    src="img/deseos.png"
+                    alt="Lista de deseos"
+                    class="gift-image">
+
             </div>
-
         </div>
+    </div>
 
+</div>
     </div>
 
 </section>
