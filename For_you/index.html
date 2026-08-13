@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramo de Tulipanes Azules</title>
+    <title>Ramo de Tulipanes Rosados</title>
     <style>
         *,
         *::after,
@@ -1052,12 +1052,349 @@
           pointer-events: none;
         }
     </style>
+
+<!-- ELEGANT DESIGN OVERRIDES -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap');
+
+  :root {
+    --rose-deep: #210b18;
+    --rose-night: #3a1028;
+    --rose: #c86b8d;
+    --rose-light: #f5c9d9;
+    --champagne: #e8c89b;
+    --champagne-light: #f8e9c9;
+    --cream: #fff8f3;
+  }
+
+  /* ---------- ATMÓSFERA PRINCIPAL ---------- */
+  body {
+    background:
+      radial-gradient(circle at 50% 20%, rgba(215, 112, 151, .18), transparent 34%),
+      radial-gradient(circle at 15% 85%, rgba(176, 63, 112, .14), transparent 30%),
+      linear-gradient(180deg, #160812 0%, #2a0b1d 52%, #10050d 100%);
+  }
+
+  .night {
+    background:
+      radial-gradient(circle at 50% 8%, rgba(236, 169, 194, .16), transparent 28%),
+      radial-gradient(circle at 50% 65%, rgba(151, 43, 90, .13), transparent 42%),
+      linear-gradient(180deg, #321126 0%, #190915 58%, #090409 100%);
+    filter: none;
+  }
+
+  .night::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,.34) 100%),
+      linear-gradient(90deg, rgba(0,0,0,.18), transparent 28%, transparent 72%, rgba(0,0,0,.18));
+    pointer-events: none;
+  }
+
+  /* Menos "neón", más brillo de polvo de estrellas */
+  .particle {
+    background: #f8e9d1;
+    box-shadow: 0 0 8px rgba(248, 233, 209, .7);
+  }
+
+  .shooting-star {
+    background: var(--champagne-light);
+    box-shadow: 0 0 7px 2px rgba(232, 200, 155, .65);
+  }
+
+  .shooting-star::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(248, 233, 209, .85)
+    );
+  }
+
+  /* ---------- TÍTULO ---------- */
+  .special-text {
+    top: 5.5%;
+    width: min(92vw, 850px);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 5vmin, 4rem);
+    font-weight: 500;
+    letter-spacing: .055em;
+    line-height: 1.05;
+    color: #fff7f2;
+    text-shadow:
+      0 2px 20px rgba(0,0,0,.35),
+      0 0 18px rgba(232, 200, 155, .15);
+  }
+
+  .special-text::after {
+    content: "♡";
+    display: block;
+    margin-top: .22em;
+    font-family: "Cormorant Garamond", serif;
+    font-size: .55em;
+    color: var(--champagne);
+    opacity: .9;
+  }
+
+  /* ---------- RAMO ---------- */
+  .ramo img {
+    filter:
+      drop-shadow(0 18px 24px rgba(0,0,0,.35))
+      drop-shadow(0 0 24px rgba(231, 139, 171, .13));
+  }
+
+  /* ---------- BARRA DE MÚSICA ---------- */
+  .music-bar {
+    width: min(92vw, 700px);
+    bottom: 1.4rem;
+    padding: .85rem 1rem;
+    border-radius: 24px;
+    background: rgba(32, 11, 24, .72);
+    backdrop-filter: blur(24px) saturate(120%);
+    border: 1px solid rgba(248, 233, 209, .16);
+    box-shadow:
+      0 20px 60px rgba(0,0,0,.38),
+      inset 0 1px 0 rgba(255,255,255,.08);
+  }
+
+  .music-bar::before {
+    background:
+      radial-gradient(circle at 18% 50%, rgba(215,112,151,.14), transparent 30%),
+      radial-gradient(circle at 82% 45%, rgba(232,200,155,.08), transparent 24%);
+  }
+
+  .music-bar__title {
+    font-family: "DM Sans", sans-serif;
+    color: #fff7f2;
+    font-size: .92rem;
+    letter-spacing: .03em;
+  }
+
+  .music-bar__artist {
+    color: #dcb6c5;
+    font-size: .75rem;
+  }
+
+  .music-bar__button {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(145deg, #e5a8bd, #b85c80);
+    border: 1px solid rgba(255,255,255,.3);
+    box-shadow: 0 8px 24px rgba(184,92,128,.3);
+  }
+
+  .music-bar__button:hover {
+    box-shadow: 0 10px 28px rgba(184,92,128,.42);
+  }
+
+  .music-bar__progress {
+    height: .55rem;
+    background: rgba(255,255,255,.08);
+  }
+
+  .music-bar__progress-fill {
+    background: linear-gradient(90deg, #d88ca8, #e8c89b);
+    box-shadow: 0 0 15px rgba(232,200,155,.18);
+  }
+
+  .music-bar__pill {
+    width: .72rem;
+    height: .72rem;
+    box-shadow: 0 0 12px rgba(248,233,209,.5);
+  }
+
+  /* ---------- PORTADA / INVITACIÓN ---------- */
+  .modal-inicio {
+    background:
+      radial-gradient(circle at 50% 35%, rgba(255,235,242,.22), transparent 30%),
+      linear-gradient(135deg, rgba(77,20,49,.96), rgba(29,7,20,.97));
+    backdrop-filter: blur(10px);
+  }
+
+  .modal-inicio::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(232,200,155,.22);
+    border-radius: 28px;
+    pointer-events: none;
+  }
+
+  .modal-contenido {
+    width: min(92vw, 500px);
+    min-width: 0;
+    padding: 3.4rem 3rem 3rem;
+    border-radius: 28px;
+    border: 1px solid rgba(232,200,155,.5);
+    background:
+      linear-gradient(145deg, rgba(255,248,243,.97), rgba(250,224,233,.94));
+    box-shadow:
+      0 30px 90px rgba(0,0,0,.38),
+      0 0 0 1px rgba(255,255,255,.28) inset,
+      0 0 55px rgba(210,105,144,.18);
+    overflow: hidden;
+  }
+
+  .modal-contenido::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(188,125,82,.28);
+    border-radius: 20px;
+    pointer-events: none;
+  }
+
+  .modal-contenido::after {
+    content: "✦";
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b88962;
+    font-size: 16px;
+    opacity: .75;
+  }
+
+  .modal-titulo {
+    position: relative;
+    z-index: 1;
+    margin-bottom: .8rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.5rem, 8vw, 3.7rem);
+    font-weight: 500;
+    line-height: .95;
+    letter-spacing: .01em;
+    color: #7c304f;
+    text-shadow: none;
+  }
+
+  .modal-titulo::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 1px;
+    margin: 18px auto 0;
+    background: linear-gradient(90deg, transparent, #b88962, transparent);
+  }
+
+  .modal-texto {
+    position: relative;
+    z-index: 1;
+    max-width: 350px;
+    margin: 1.35rem auto 2rem;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: .96rem;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: .025em;
+    color: #765d65;
+    text-shadow: none;
+  }
+
+  .btn-para-ti {
+    position: relative;
+    z-index: 1;
+    min-width: 185px;
+    padding: .95rem 2.25rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.55);
+    background: linear-gradient(135deg, #b65d80, #8f3f60);
+    color: #fffaf8;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: .92rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    box-shadow:
+      0 12px 28px rgba(143,63,96,.28),
+      inset 0 1px 0 rgba(255,255,255,.3);
+  }
+
+  .btn-para-ti::after {
+    background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.22), transparent 80%);
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: transform .6s ease, opacity .3s ease;
+  }
+
+  .btn-para-ti:hover {
+    background: linear-gradient(135deg, #c56b8e, #9b4668);
+    box-shadow:
+      0 16px 34px rgba(143,63,96,.35),
+      inset 0 1px 0 rgba(255,255,255,.35);
+    transform: translateY(-2px);
+  }
+
+  .btn-para-ti:hover::after {
+    transform: translateX(120%);
+    opacity: 1;
+  }
+
+  /* ---------- PEQUEÑOS DETALLES DE LUJO ---------- */
+  #contenido-principal::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 4;
+    background:
+      radial-gradient(circle at 50% 35%, transparent 0 30%, rgba(255,220,231,.025) 55%, rgba(0,0,0,.18) 100%);
+  }
+
+  @media (max-width: 600px) {
+    .modal-contenido {
+      padding: 3.1rem 1.65rem 2.55rem;
+      border-radius: 24px;
+    }
+
+    .modal-inicio::before {
+      inset: 10px;
+      border-radius: 22px;
+    }
+
+    .modal-texto {
+      font-size: .9rem;
+      line-height: 1.65;
+      margin-bottom: 1.6rem;
+    }
+
+    .btn-para-ti {
+      min-width: 165px;
+      padding: .88rem 1.8rem;
+      font-size: .82rem;
+    }
+
+    .music-bar {
+      bottom: .75rem;
+      width: calc(100vw - 24px);
+      border-radius: 20px;
+    }
+
+    .special-text {
+      top: 4%;
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+</style>
+
 </head>
 <body class="not-loaded">
   <!-- Botón para ti y audio, el resto oculto al inicio -->
   <div id="pantalla-inicial" class="modal-inicio">
     <div class="modal-contenido">
       <div class="modal-titulo">🌷 ¡Bienvenida! 🌷</div>
+      <div class="cumpleanos-subtexto">
+        Feliz Cumpleaños
+        <span>Hoy celebramos la hermosa persona que eres.</span>
+      </div>
       <div class="modal-texto">Haz clic en el botón para descubrir tu ramo especial de tulipanes rosados.</div>
       <button id="btn-para-ti" class="btn-para-ti">Para ti</button>
     </div>
@@ -1161,7 +1498,7 @@
     </div>
   </div>
   <div class="particles"></div>
-  <div class="special-text">Para la mujer mas Hermosa  </div>
+  <div class="special-text">Para la mujer más hermosa  </div>
     <div class="shooting-stars">
       <div class="shooting-star"></div>
       <div class="shooting-star"></div>
